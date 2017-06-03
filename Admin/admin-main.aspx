@@ -4,13 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>
-        <ul class="am-nav am-nav-pills">
-            <li><a href="account/ac-view.aspx">学生信息浏览</a></li>
-            <li><a href="#">学生信息查询</a></li>
-            <li><a href="#">学生信息修改</a></li>
-            <li><a href="#">学生信息删除</a></li>
-            <li><a href="#">学生信息插入</a></li>
-        </ul>
+        
     </div>
     <div style="margin-top: 150px;">
         <h1 style="text-align: center;">
