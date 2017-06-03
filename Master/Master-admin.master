@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master-admin.master.cs" Inherits="Admin_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>管理员系统</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="asset/css/amazeui.flat.css" rel="stylesheet" />
+        <script src="asset/js/amazeui.js"></script>
+        <link href="../asset/css/amazeui.css" rel="stylesheet" />
+        <script src="../asset/js/amazeui.min.js"></script>
+    </asp:ContentPlaceHolder>
+    <link href="asset/css/amazeui.flat.css" rel="stylesheet" />
+    <script src="../asset/js/amazeui.min.js"></script>
+    <script src="asset/js/amazeui.js"></script>
+    <link href="../asset/css/amazeui.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div style="margin: 0 auto; background-color: aliceblue; height: 60px;">
+                <h1 style="text-align: center; padding-top: 10px;">学生信息管理系统--管理员</h1>
+            </div>
+            <div>
+                <ul class="am-nav am-nav-tabs am-nav-justify">
+                    <li class="am-active"><a href="#">账户信息管理</a></li>
+                    <li><a href="#">学生信息管理</a></li>
+                    <li><a href="#">教师信息管理</a></li>
+                    <li><a href="#">课程成绩管理</a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
