@@ -9,6 +9,14 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["name"] == null)
+        {
+            Response.Write("<script LANGUAGE='javascript'>alert('请登录');window.location.href='/Login.aspx';</script>");
+        }
+        else
+        {
+            string s = Session["name"].ToString();
+            Lblname.Text = s;
+        }
     }
 }

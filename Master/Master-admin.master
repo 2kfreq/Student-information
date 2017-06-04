@@ -23,13 +23,13 @@
     <form id="form1" runat="server">
         <div>
             <div style="margin: 0 auto; background-color: aliceblue; height: 60px;">
-                <h1 style="text-align: center; padding-top: 10px;">学生信息管理系统--管理员</h1>
+                <h1 style="text-align: center; padding-top: 10px;">学生信息管理系统--管理员<asp:Label ID="Lblname" runat="server" Text=""></asp:Label></h1>
             </div>
             <div>
                 <ul class="am-nav am-nav-tabs am-nav-justify">
                     <li class="am-active"><a href="/Admin/student/st-view.aspx">学生信息管理</a></li>
-                    <li><a href="#">教师信息管理</a></li>
-                    <li><a href="#">课程成绩管理</a></li>
+                    <li><a href="/Admin/teacher/tea-view.aspx">教师信息管理</a></li>
+                    <li><a href="/Admin/class/class-view.aspx">课程信息管理</a></li>
                     <li><a href="/Admin/account/ac-adduser.aspx">账户信息管理</a></li>
                 </ul>
             </div>

@@ -2046,6 +2046,7 @@ table {
   max-width: 100%;
   background-color: transparent;
   empty-cells: show;
+    margin-right: 4px;
 }
 table code {
   white-space: normal;

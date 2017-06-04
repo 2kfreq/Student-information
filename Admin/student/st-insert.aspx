@@ -104,7 +104,7 @@
             <asp:TextBox ID="密码TextBox" runat="server" Text='<%# Bind("密码") %>' />
                 <br />
                 <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="插入" class="am-btn am-btn-secondary"/>
-                &nbsp;<asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消" class="am-btn am-btn-default"/>
+                &nbsp;<asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="清空" class="am-btn am-btn-default"/>
             </InsertItemTemplate>
             <ItemTemplate>
                 学号:

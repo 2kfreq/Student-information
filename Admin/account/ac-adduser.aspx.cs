@@ -19,7 +19,10 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
     int returnValue;
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["name"] == null)
+        {
+            Response.Write("<script LANGUAGE='javascript'>alert('请登录');window.location.href='/Login.aspx';</script>");
+        }
     }
 
     protected void btn1_Click(object sender, EventArgs e)

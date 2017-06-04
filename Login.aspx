@@ -14,10 +14,6 @@
     <form id="form1" runat="server">
 
     <div style="width:60%;margin:20px auto;">
-        <h1>请选择您的身份</h1>
-        <asp:DropDownList ID="DropDownList1" runat="server" class="am-form-group am-form-select">
-        </asp:DropDownList>
-        <p />
         <label for="doc-ipt-email-1">用户名</label>
         <asp:TextBox ID="TextBox1" runat="server" placeholder="用户名" CssClass="am-form-field"></asp:TextBox>
         <p />

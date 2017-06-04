@@ -9,6 +9,9 @@ public partial class Admin_teacher_tea_view : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["name"] == null)
+        {
+            Response.Write("<script LANGUAGE='javascript'>alert('请登录');window.location.href='/Login.aspx';</script>");
+        }
     }
 }

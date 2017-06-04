@@ -14,7 +14,7 @@
     </div>
     <div style="margin: 0 auto; padding-left: 10%; padding-right: 10%; padding-top: 20px;">
         <div>
-            <asp:TextBox ID="tbSelect" runat="server" class="am-form-field"></asp:TextBox>
+            <asp:TextBox ID="tbSelect" runat="server" class="am-form-field"  placeholder="请输入学生学号"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="查询" CssClass="am-btn am-btn-secondary" Style="margin-top:10px;" />
             <p />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
