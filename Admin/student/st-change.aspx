@@ -17,6 +17,7 @@
             DataKeyNames="学号" DataSourceID="SqlDataSource1" CssClass="am-table">
 
             <Columns>
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="学号" HeaderText="学号" ReadOnly="True"
                     SortExpression="学号" />
                 <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />

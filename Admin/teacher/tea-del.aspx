@@ -25,6 +25,7 @@
         DataKeyNames="教师编号" DataSourceID="SqlDataSource1" CssClass="am-table">
 
         <Columns>
+            <asp:CommandField ShowDeleteButton="True" />
             <asp:BoundField DataField="教师编号" HeaderText="教师编号" ReadOnly="True"
                 SortExpression="教师编号" />
             <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />

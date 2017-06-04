@@ -12,26 +12,38 @@
             <li><a href="tea-insert.aspx">教师信息插入</a></li>
         </ul>
     </div>
-        <div>
+    <div>
         <asp:GridView ID="GridView1" runat="server" PageSize="6"
-            AutoGenerateColumns="False"
-            DataKeyNames="教师编号" DataSourceID="SqlDataSource1" CssClass="am-table">
+            AutoGenerateColumns="False" CssClass="am-table"
+            DataKeyNames="教师编号" DataSourceID="SqlDataSource1">
             <Columns>
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="教师编号" HeaderText="教师编号" ReadOnly="True"
                     SortExpression="教师编号" />
                 <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
-                
-                <asp:BoundField DataField="性别" HeaderText="性别" SortExpression="性别" />
+                <asp:TemplateField HeaderText="性别" SortExpression="性别">
+                    <EditItemTemplate>
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server"
+                            SelectedValue='<%# Bind("性别") %>'>
+                            <asp:ListItem>男</asp:ListItem>
+                            <asp:ListItem>女</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("性别") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="职称" HeaderText="职称" SortExpression="职称" />
                 <asp:BoundField DataField="学历" HeaderText="学历" SortExpression="学历" />
                 <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
                 <asp:BoundField DataField="政治面貌" HeaderText="政治面貌" SortExpression="政治面貌" />
+                
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"
             ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
             SelectCommand="SELECT * FROM [教师表]"
-            UpdateCommand="UPDATE 教师表 SET 姓名 = @姓名, 性别 = @性别, 职称 = @职称, 学历 = @学历, 备注 = @备注, 政治面貌 = @政治面貌, 密码 = @密码 WHERE (教师编号 = @教师编号)">
+            UpdateCommand="UPDATE 教师表 SET 姓名 = @姓名, 性别 = @性别, 职称 = @职称, 学历 = @学历, 备注 = @备注, 政治面貌 = @政治面貌 WHERE (教师编号 = @教师编号)">
             <UpdateParameters>
                 <asp:QueryStringParameter Name="姓名" />
                 <asp:QueryStringParameter Name="性别" />
@@ -39,7 +51,6 @@
                 <asp:QueryStringParameter Name="学历" />
                 <asp:QueryStringParameter Name="备注" />
                 <asp:QueryStringParameter Name="政治面貌" />
-                <asp:QueryStringParameter Name="密码" />
                 <asp:QueryStringParameter Name="教师编号" />
             </UpdateParameters>
         </asp:SqlDataSource>

@@ -13,7 +13,7 @@
         </ul>
     </div>
     <div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [教师表]" InsertCommand ="INSERT INTO [教师表] ([教师编号], [姓名], [性别], [职称], [学历], [备注], [政治面貌], [密码]) VALUES (@教师编号, @姓名, @性别, @职称, @学历, @备注, @政治面貌, @密码)" UpdateCommand ="UPDATE [教师表] SET [姓名] = @姓名, [性别] = @性别, [职称] = @职称, [学历] = @学历, [备注] = @备注, [政治面貌] = @政治面貌, [密码] = @密码 WHERE [教师编号] = @original_教师编号 AND [姓名] = @original_姓名 AND (([性别] = @original_性别) OR ([性别] IS NULL AND @original_性别 IS NULL)) AND (([职称] = @original_职称) OR ([职称] IS NULL AND @original_职称 IS NULL)) AND (([学历] = @original_学历) OR ([学历] IS NULL AND @original_学历 IS NULL)) AND (([备注] = @original_备注) OR ([备注] IS NULL AND @original_备注 IS NULL)) AND (([政治面貌] = @original_政治面貌) OR ([政治面貌] IS NULL AND @original_政治面貌 IS NULL)) AND [密码] = @original_密码" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [教师表] WHERE [教师编号] = @original_教师编号 AND [姓名] = @original_姓名 AND (([性别] = @original_性别) OR ([性别] IS NULL AND @original_性别 IS NULL)) AND (([职称] = @original_职称) OR ([职称] IS NULL AND @original_职称 IS NULL)) AND (([学历] = @original_学历) OR ([学历] IS NULL AND @original_学历 IS NULL)) AND (([备注] = @original_备注) OR ([备注] IS NULL AND @original_备注 IS NULL)) AND (([政治面貌] = @original_政治面貌) OR ([政治面貌] IS NULL AND @original_政治面貌 IS NULL)) AND [密码] = @original_密码" OldValuesParameterFormatString="original_{0}">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [教师表]" InsertCommand ="INSERT INTO [教师表] ([教师编号], [姓名], [性别], [职称], [学历], [备注], [政治面貌]) VALUES (@教师编号, @姓名, @性别, @职称, @学历, @备注, @政治面貌)" UpdateCommand ="UPDATE [教师表] SET [姓名] = @姓名, [性别] = @性别, [职称] = @职称, [学历] = @学历, [备注] = @备注, [政治面貌] = @政治面貌 WHERE [教师编号] = @original_教师编号 AND [姓名] = @original_姓名 AND (([性别] = @original_性别) OR ([性别] IS NULL AND @original_性别 IS NULL)) AND (([职称] = @original_职称) OR ([职称] IS NULL AND @original_职称 IS NULL)) AND (([学历] = @original_学历) OR ([学历] IS NULL AND @original_学历 IS NULL)) AND (([备注] = @original_备注) OR ([备注] IS NULL AND @original_备注 IS NULL)) AND (([政治面貌] = @original_政治面貌) OR ([政治面貌] IS NULL AND @original_政治面貌 IS NULL)) " ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [教师表] WHERE [教师编号] = @original_教师编号 AND [姓名] = @original_姓名 AND (([性别] = @original_性别) OR ([性别] IS NULL AND @original_性别 IS NULL)) AND (([职称] = @original_职称) OR ([职称] IS NULL AND @original_职称 IS NULL)) AND (([学历] = @original_学历) OR ([学历] IS NULL AND @original_学历 IS NULL)) AND (([备注] = @original_备注) OR ([备注] IS NULL AND @original_备注 IS NULL)) AND (([政治面貌] = @original_政治面貌) OR ([政治面貌] IS NULL AND @original_政治面貌 IS NULL))" OldValuesParameterFormatString="original_{0}">
             <DeleteParameters>
                 <asp:Parameter Name="original_教师编号" Type="String" />
                 <asp:Parameter Name="original_姓名" Type="String" />
@@ -22,7 +22,6 @@
                 <asp:Parameter Name="original_学历" Type="String" />
                 <asp:Parameter Name="original_备注" Type="String" />
                 <asp:Parameter Name="original_政治面貌" Type="String" />
-                <asp:Parameter Name="original_密码" Type="String" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="教师编号" Type="String" />
@@ -32,7 +31,6 @@
                 <asp:Parameter Name="学历" Type="String" />
                 <asp:Parameter Name="备注" Type="String" />
                 <asp:Parameter Name="政治面貌" Type="String" />
-                <asp:Parameter Name="密码" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="姓名" Type="String" />
@@ -41,7 +39,6 @@
                 <asp:Parameter Name="学历" Type="String" />
                 <asp:Parameter Name="备注" Type="String" />
                 <asp:Parameter Name="政治面貌" Type="String" />
-                <asp:Parameter Name="密码" Type="String" />
                 <asp:Parameter Name="original_教师编号" Type="String" />
                 <asp:Parameter Name="original_姓名" Type="String" />
                 <asp:Parameter Name="original_性别" Type="String" />
@@ -49,7 +46,6 @@
                 <asp:Parameter Name="original_学历" Type="String" />
                 <asp:Parameter Name="original_备注" Type="String" />
                 <asp:Parameter Name="original_政治面貌" Type="String" />
-                <asp:Parameter Name="original_密码" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
         <asp:FormView ID="FormView2" runat="server" DataKeyNames="教师编号" 
