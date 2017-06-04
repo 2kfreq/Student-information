@@ -25,7 +25,6 @@
         DataKeyNames="教师编号" DataSourceID="SqlDataSource1" CssClass="am-table">
 
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" />
             <asp:BoundField DataField="教师编号" HeaderText="教师编号" ReadOnly="True"
                 SortExpression="教师编号" />
             <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
@@ -34,7 +33,6 @@
             <asp:BoundField DataField="学历" HeaderText="学历" SortExpression="学历" />
             <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
             <asp:BoundField DataField="政治面貌" HeaderText="政治面貌" SortExpression="政治面貌" />
-            <asp:BoundField DataField="密码" HeaderText="密码" SortExpression="密码" />
         </Columns>
     </asp:GridView>
 </asp:Content>

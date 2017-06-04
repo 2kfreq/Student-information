@@ -21,7 +21,6 @@
             <asp:BoundField DataField="学历" HeaderText="学历" SortExpression="学历" />
             <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
             <asp:BoundField DataField="政治面貌" HeaderText="政治面貌" SortExpression="政治面貌" />
-            <asp:BoundField DataField="密码" HeaderText="密码" SortExpression="密码" />
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [教师表]"></asp:SqlDataSource>

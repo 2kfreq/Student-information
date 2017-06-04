@@ -42,7 +42,6 @@
                     <asp:BoundField DataField="入学时间" HeaderText="入学时间" SortExpression="入学时间" />
                     <asp:BoundField DataField="政治面貌" HeaderText="政治面貌" SortExpression="政治面貌" />
                     <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
-                    <asp:BoundField DataField="密码" HeaderText="密码" SortExpression="密码" />
                 </Columns>
             </asp:GridView>
         </div>

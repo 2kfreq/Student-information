@@ -76,9 +76,6 @@
                             政治面貌:
                             <asp:TextBox ID="政治面貌TextBox" runat="server" Text='<%# Bind("政治面貌") %>' />
                             <br />
-                            密码:
-                            <asp:TextBox ID="密码TextBox" runat="server" Text='<%# Bind("密码") %>' />
-                            <br />
                             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
                                 CommandName="Update" Text="更新" />
                             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
@@ -106,13 +103,8 @@
                             政治面貌:
                             <asp:TextBox ID="政治面貌TextBox" runat="server" Text='<%# Bind("政治面貌") %>' />
                             <br />
-                            密码:
-                            <asp:TextBox ID="密码TextBox" runat="server" Text='<%# Bind("密码") %>' />
-                            <br />
-                            <asp:Button ID="InsertButton" runat="server" CausesValidation="True" 
-                                CommandName="Insert" Text="插入" class="am-btn am-btn-secondary"/>
-&nbsp;<asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" 
-                                Text="清空" class="am-btn am-btn-default"/>
+                            <asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="插入" class="am-btn am-btn-secondary"/>
+&nbsp;<asp:Button ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="清空" class="am-btn am-btn-default"/>
                         </InsertItemTemplate>
                         <ItemTemplate>
                             教师编号:
@@ -135,9 +127,6 @@
                             <br />
                             政治面貌:
                             <asp:Label ID="政治面貌Label" runat="server" Text='<%# Bind("政治面貌") %>' />
-                            <br />
-                            密码:
-                            <asp:Label ID="密码Label" runat="server" Text='<%# Bind("密码") %>' />
                             <br />
                             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="编辑" />
                             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="删除" />

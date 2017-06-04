@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <h1 style="text-align:center">学生信息管理系统</h1>
     <div style="width:60%;margin:20px auto;">
         <label for="doc-ipt-email-1">用户名</label>
         <asp:TextBox ID="TextBox1" runat="server" placeholder="用户名" CssClass="am-form-field"></asp:TextBox>
@@ -24,5 +24,9 @@
         <asp:Button ID="Button2" runat="server" Text="清空" class="am-btn am-btn-default" OnClick="Button2_Click"/>
     </div>
     </form>
+    <div style="margin:40px auto; width:250px;">
+        <h2>源码下载：<a href="https://github.com/2kfreq/Student-information"><img src="/asset/img/github.jpg" height="25px" style="margin-bottom:7px;"/></a></h2>
+        
+    </div>
 </body>
 </html>
