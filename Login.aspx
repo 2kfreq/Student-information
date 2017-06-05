@@ -25,7 +25,7 @@
     </div>
     </form>
     <div style="margin:40px auto; width:250px;">
-        <h2>源码：<a href="https://github.com/2kfreq/Student-information"><img src="/asset/img/github.jpg" height="25px" style="margin-bottom:7px;"/></a></h2>
+        <h2>源码：<a href="https://github.com/2kfreq/Student-information" target="_blank"><img src="/asset/img/github.jpg" height="25px" style="margin-bottom:7px;"/></a></h2>
         
     </div>
 </body>
