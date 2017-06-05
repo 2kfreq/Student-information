@@ -7,6 +7,7 @@
         <ul class="am-nav am-nav-pills">
             <li class="am-active"><a href="class-view.aspx">班级信息浏览</a></li>
             <li><a href="class-search.aspx">班级信息查询</a></li>
+            <li><a href="class-del.aspx">班级信息删除</a></li>
             <li><a href="add-class.aspx">添加班级</a></li>
         </ul>
     </div>
