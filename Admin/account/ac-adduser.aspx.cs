@@ -11,7 +11,6 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
 {
     public string CID;
     public string sqlconn;
-    DataRow dtr;
     SqlDataAdapter myadapter;
     SqlCommandBuilder scb;
     DataSet myDataSet;
@@ -32,11 +31,7 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
         myadapter = new SqlDataAdapter();
         myadapter.SelectCommand = mysqlcommand;
         myDataSet = new DataSet();
-        mysqlconnection.Open();
-        int numberOfRow = myadapter.Fill(myDataSet, "用户表");
-        mysqlconnection.Close();
         DataTable tb = myDataSet.Tables["用户表"];
-        dtr = tb.Rows[0];
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
         mysqlconnection.Open();
         if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text!="")
@@ -66,5 +61,7 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
                 }
             }
         }
+        else
+            Response.Write("<script>alert('不能为空！');</script>");
     }
 }
