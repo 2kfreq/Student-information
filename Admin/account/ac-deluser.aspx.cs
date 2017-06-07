@@ -25,9 +25,6 @@ public partial class Admin_account_ac_deluser : System.Web.UI.Page
     protected void btn1_Click(object sender, EventArgs e)
     {
         SqlConnection mysqlconnection = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["strcon"]);
-        SqlCommand mysqlcommand = mysqlconnection.CreateCommand();
-        mysqlcommand.CommandText = "select 用户名,密码,备注 from 用户表 where 用户名=" + "'" + CID + "'";
-       
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
         mysqlconnection.Open();
         if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "")

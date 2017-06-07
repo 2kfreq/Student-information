@@ -27,10 +27,8 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
 
     protected void btn1_Click(object sender, EventArgs e)
     {
-        CID = Session["name"].ToString();
         SqlConnection mysqlconnection = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["strcon"]);
         SqlCommand mysqlcommand = mysqlconnection.CreateCommand();
-        mysqlcommand.CommandText = "select 用户名,密码,备注 from 用户表 where 用户名=" + "'" + CID + "'";
         myadapter = new SqlDataAdapter();
         myadapter.SelectCommand = mysqlcommand;
         myDataSet = new DataSet();
@@ -41,7 +39,7 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
         dtr = tb.Rows[0];
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
         mysqlconnection.Open();
-        if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "")
+        if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text!="")
         {
             coutsqlcommand.CommandText = "select count(*) as 数目 from 用户表 where 用户名=" + "'" + Tbname.Text + "'";
             returnValue = (int)coutsqlcommand.ExecuteScalar();
@@ -60,7 +58,7 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
                     DataRow dbr = myDataSet.Tables["用户表"].NewRow();
                     dbr["用户名"] = (String)(Tbname.Text);
                     dbr["密码"] = (String)(tbpw.Text);
-                    dbr["备注"] = (String)(tbbackup.Text);
+                    dbr["密保问题"] = (String)(tbbackup.Text);
                     myDataSet.Tables["用户表"].Rows.Add(dbr);
                     scb = new SqlCommandBuilder(myadapter);
                     myadapter.Update(myDataSet.Tables["用户表"]);

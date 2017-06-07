@@ -14,7 +14,7 @@
         <Columns>
             <asp:BoundField DataField="用户名" HeaderText="用户名" ReadOnly="True" SortExpression="用户名" />
             <asp:BoundField DataField="密码" HeaderText="密码" SortExpression="密码" />
-            <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
+            <asp:BoundField DataField="密保问题" HeaderText="密保问题" SortExpression="密保问题" />
         </Columns>
     </asp:GridView>
 

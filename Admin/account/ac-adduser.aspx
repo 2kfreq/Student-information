@@ -32,9 +32,9 @@
                 </div>
             </div>
             <div class="am-form-group">
-                <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label">用户备注</label>
+                <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label">密保问题</label>
                 <div class="am-u-sm-10">
-                    <asp:TextBox ID="tbbackup" runat="server" placeholder="用户备注"></asp:TextBox>
+                    <asp:TextBox ID="tbbackup" runat="server" placeholder="密保问题"></asp:TextBox>
                 </div>
             </div>
             <div class="am-form-group">
