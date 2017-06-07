@@ -51,9 +51,9 @@
                     </div>
                     <div class="am-modal-footer">
 
-                        <asp:linkButton ID="lb_submit" runat="server" Text="确定"  OnClick="lb_submit_Click"></asp:linkButton>
+                        <asp:LinkButton ID="lb_submit" runat="server" Text="确定" OnClick="lb_submit_Click" Style="display: table-cell!important; padding: 0 5px; height: 44px; -webkit-box-sizing: border-box!important; box-sizing: border-box!important; font-size: 1.6rem; line-height: 44px; text-align: center; color: #0e90d2; display: block; word-wrap: normal; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; cursor: pointer; border-right: 1px solid #dedede;"></asp:LinkButton>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
