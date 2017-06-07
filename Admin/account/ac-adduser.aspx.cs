@@ -41,14 +41,14 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
         mysqlconnection.Open();
         if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text!="")
         {
-            coutsqlcommand.CommandText = "select count(*) as 数目 from 用户表 where 用户名=" + "'" + Tbname.Text + "'";
-            returnValue = (int)coutsqlcommand.ExecuteScalar();
             if (tbpw.Text != tbpwc.Text)
             {
                 Response.Write("<script>alert('两次输入密码不一致！请重新输入。');</script>");
             }
             else
             {
+                coutsqlcommand.CommandText = "select count(*) as 数目 from 用户表 where 用户名=" + "'" + Tbname.Text + "'";
+                returnValue = (int)coutsqlcommand.ExecuteScalar();
                 if (returnValue != 0)
                 {
                     Response.Write("<script>alert('用户名已存在！');</script>");

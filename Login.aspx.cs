@@ -29,16 +29,12 @@ public partial class Login : System.Web.UI.Page
         {
 
             strcmd = "select count(*) from 用户表  where  用户名='" + TextBox1.Text + "' and 密码='" + TextBox2.Text + "'";
-
-
-
             myConn.Open();
             SqlCommand cmd = new SqlCommand(strcmd, myConn);
             if ((int)cmd.ExecuteScalar() == 1)
             {
                 this.Session.Add("name", Convert.ToString(TextBox1.Text));
                 Response.Redirect("Admin//admin-main.aspx");
-
             }
             else
                 Response.Write("<script LANGUAGE='javascript'>alert('账号或密码错误!');history.go(-1);</script>");
@@ -64,17 +60,19 @@ public partial class Login : System.Web.UI.Page
         mysqlconnection.Close();
         DataTable tb = myDataSet.Tables["用户表"];
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
-        mysqlconnection.Open();
+        
         if (tbusername.Text != "" && tbpw.Text != "" && tbpwc.Text != ""&&tbmibao.Text!="")
         {
-            coutsqlcommand.CommandText = "select count(*) as 数目 from 用户表 where 用户名=" + "'" + tbusername.Text + "' and "+"密保问题='"+tbmibao.Text+"'";
-            returnValue = (int)coutsqlcommand.ExecuteScalar();
+            
             if (tbpw.Text != tbpwc.Text)
             {
                 Response.Write("<script>alert('两次输入密码不一致！请重新输入。');</script>");
             }
             else
             {
+                mysqlconnection.Open();
+                coutsqlcommand.CommandText = "select count(*) as 数目 from 用户表 where 用户名=" + "'" + tbusername.Text + "' and " + "密保问题='" + tbmibao.Text + "'";
+                returnValue = (int)coutsqlcommand.ExecuteScalar();
                 if (returnValue != 1)
                 {
                     Response.Write("<script>alert('用户名或密保问题输入错误！');</script>");
