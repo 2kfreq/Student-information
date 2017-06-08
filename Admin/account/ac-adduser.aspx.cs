@@ -31,10 +31,13 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
         myadapter = new SqlDataAdapter();
         myadapter.SelectCommand = mysqlcommand;
         myDataSet = new DataSet();
-        DataTable tb = myDataSet.Tables["用户表"];
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
         mysqlconnection.Open();
-        if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text!="")
+        CID = Session["name"].ToString();
+        mysqlcommand.CommandText = "select 用户名,密码,密保问题 from 用户表 where 用户名=" + "'" + CID + "'";
+        int numberOfRow = myadapter.Fill(myDataSet, "用户表");
+        DataTable tb = myDataSet.Tables["用户表"];
+        if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text != "")
         {
             if (tbpw.Text != tbpwc.Text)
             {
