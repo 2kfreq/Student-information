@@ -33,7 +33,7 @@
                 type="button"
                 class="am-btn am-btn-danger"
                 data-am-modal="{target: '#forget'}">
-                修改密码
+                忘记密码
             </button>
 
             <div class="am-modal am-modal-alert" tabindex="-1" id="forget">
@@ -50,7 +50,6 @@
                         <asp:TextBox ID="tbpwc" runat="server" placeholder="再次输入密码" CssClass="am-form-field" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="am-modal-footer">
-
                         <asp:LinkButton ID="lb_submit" runat="server" Text="确定" OnClick="lb_submit_Click" Style="display: table-cell!important; padding: 0 5px; height: 44px; -webkit-box-sizing: border-box!important; box-sizing: border-box!important; font-size: 1.6rem; line-height: 44px; text-align: center; color: #0e90d2; display: block; word-wrap: normal; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; cursor: pointer; border-right: 1px solid #dedede;"></asp:LinkButton>
                     </div>
 
@@ -59,7 +58,7 @@
         </div>
 
     </form>
-    <div style="margin: 40px auto; width: 250px;">
+    <div style="margin: 40px auto; width: 210px;">
         <h2>源码：<a href="https://github.com/2kfreq/Student-information" target="_blank"><img src="/asset/img/github.jpg" height="25px" style="margin-bottom: 7px;" /></a></h2>
     </div>
 </body>

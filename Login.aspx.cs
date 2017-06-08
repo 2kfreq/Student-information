@@ -10,10 +10,7 @@ using System.Web.UI.WebControls;
 public partial class Login : System.Web.UI.Page
 {
     public string sqlconn;
-    DataRow dtr;
-    SqlCommandBuilder scb;
     DataSet myDataSet;
-    SqlConnection mysqlconnection;
     int returnValue;
     protected void Page_Load(object sender, EventArgs e)
     {
