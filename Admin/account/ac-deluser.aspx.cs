@@ -11,8 +11,6 @@ public partial class Admin_account_ac_deluser : System.Web.UI.Page
 {
     public string CID;
     public string sqlconn;
-    DataRow dtr;
-    SqlConnection mysqlconnection;
     int returnValue;
     protected void Page_Load(object sender, EventArgs e)
     {

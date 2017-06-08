@@ -9,12 +9,11 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_account_ac_adduser : System.Web.UI.Page
 {
-    public string CID;
+    public string username;
     public string sqlconn;
     SqlDataAdapter myadapter;
     SqlCommandBuilder scb;
     DataSet myDataSet;
-    SqlConnection mysqlconnection;
     int returnValue;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -33,10 +32,9 @@ public partial class Admin_account_ac_adduser : System.Web.UI.Page
         myDataSet = new DataSet();
         SqlCommand coutsqlcommand = mysqlconnection.CreateCommand();
         mysqlconnection.Open();
-        CID = Session["name"].ToString();
-        mysqlcommand.CommandText = "select 用户名,密码,密保问题 from 用户表 where 用户名=" + "'" + CID + "'";
-        int numberOfRow = myadapter.Fill(myDataSet, "用户表");
-        DataTable tb = myDataSet.Tables["用户表"];
+        username = Session["name"].ToString();
+        mysqlcommand.CommandText = "select 用户名,密码,密保问题 from 用户表 where 用户名=" + "'" + username + "'";
+        myadapter.Fill(myDataSet, "用户表");
         if (Tbname.Text != "" && tbpw.Text != "" && tbpwc.Text != "" && tbbackup.Text != "")
         {
             if (tbpw.Text != tbpwc.Text)
